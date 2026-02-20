@@ -38,7 +38,7 @@ const PricingSection = () => {
               <p className="text-muted-foreground text-sm mb-5 md:mb-6">Ideal para começar</p>
               <div className="mb-5 md:mb-6">
                 <span className="font-display text-4xl md:text-5xl font-extrabold">R$ 39</span>
-                <span className="text-xl md:text-2xl font-bold text-muted-foreground">,90</span>
+                <span className="text-xl md:text-2xl font-bold text-muted-foreground">,99</span>
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <ul className="space-y-2.5 md:space-y-3 text-left mb-6 md:mb-8">
@@ -67,7 +67,7 @@ const PricingSection = () => {
               <h3 className="font-display text-lg md:text-xl font-bold mb-1 mt-2">Plano Vitalício</h3>
               <p className="text-muted-foreground text-sm mb-5 md:mb-6">Pague uma vez, use para sempre</p>
               <div className="mb-5 md:mb-6">
-                <span className="font-display text-4xl md:text-5xl font-extrabold">R$ 149,90</span>
+                <span className="font-display text-4xl md:text-5xl font-extrabold">R$ 149,99</span>
                 <span className="text-muted-foreground"> /único</span>
               </div>
               <ul className="space-y-2.5 md:space-y-3 text-left mb-6 md:mb-8">
