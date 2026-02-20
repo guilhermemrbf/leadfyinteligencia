@@ -42,28 +42,28 @@ const FAQSection = () => {
     <section id="faq" className="section-spacing">
       <div className="container max-w-3xl mx-auto">
         <AnimatedSection>
-          <div className="text-center mb-12">
-            <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">
+          <div className="text-center mb-8 md:mb-12">
+            <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
               Dúvidas Frequentes
             </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold">
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold">
               Ainda tem dúvidas?
             </h2>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={100}>
-          <Accordion type="single" collapsible className="space-y-3">
+          <Accordion type="single" collapsible className="space-y-2.5 md:space-y-3">
             {faqs.map((faq, i) => (
               <AccordionItem
                 key={i}
                 value={`faq-${i}`}
-                className="glass-card px-6 border-border/50"
+                className="glass-card px-4 md:px-6 border-border/50 hover:border-primary/20 transition-colors duration-300"
               >
-                <AccordionTrigger className="text-left font-semibold hover:no-underline py-5">
+                <AccordionTrigger className="text-left font-semibold hover:no-underline py-4 md:py-5 text-sm md:text-base">
                   {faq.q}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5">
+                <AccordionContent className="text-muted-foreground pb-4 md:pb-5 text-sm">
                   {faq.a}
                 </AccordionContent>
               </AccordionItem>
