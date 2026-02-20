@@ -1,4 +1,5 @@
 import { Target, MessageSquare, FolderOpen } from "lucide-react";
+import productImg from "@/assets/leadfy-product.png";
 
 const pillars = [
   {
@@ -32,10 +33,20 @@ const SolutionSection = () => {
           Conheça o{" "}
           <span className="gradient-text">Leadfy Inteligência</span>
         </h2>
-        <p className="text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
+        <p className="text-muted-foreground text-lg mb-12 max-w-2xl mx-auto">
           A única plataforma que une prospecção, prompts e organização de leads —
           feita sob medida para quem cria e vende apps.
         </p>
+
+        {/* Product showcase */}
+        <div className="relative mx-auto max-w-4xl mb-16">
+          <div className="absolute inset-0 bg-primary/5 rounded-2xl blur-3xl scale-105" />
+          <img
+            src={productImg}
+            alt="Leadfy Inteligência — plataforma desktop e mobile"
+            className="relative rounded-2xl border border-border/20 shadow-2xl w-full"
+          />
+        </div>
 
         <div className="grid md:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
