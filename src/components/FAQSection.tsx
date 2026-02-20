@@ -23,7 +23,7 @@ const faqs = [
     a: "Provavelmente faltou método e mensagens certas. O Leadfy te dá um sistema passo a passo que funciona mesmo para quem nunca vendeu.",
   },
   {
-    q: "Meu nicho é muito difícil. Vai funcionar?",
+    q: "Meu nicho é muito difícil. Vai funciona?",
     a: "O Leadfy cobre diversos nichos e gera abordagens personalizadas. Se existem empresas no seu nicho, o sistema encontra e te ajuda a abordá-las.",
   },
   {
@@ -38,7 +38,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="section-spacing">
+    <section id="faq" className="section-spacing">
       <div className="container max-w-3xl mx-auto">
         <div className="text-center mb-12">
           <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">

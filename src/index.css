@@ -86,4 +86,13 @@
   .section-spacing {
     @apply py-20 md:py-28 px-4;
   }
+
+  .section-divider {
+    @apply border-t border-border/20;
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
 }

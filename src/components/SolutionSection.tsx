@@ -5,22 +5,25 @@ const pillars = [
     icon: Target,
     title: "Prospecção Automática",
     desc: "Encontre empresas que precisam de apps no seu nicho, sem pesquisar manualmente.",
+    gradient: "from-primary/20 to-primary/5",
   },
   {
     icon: MessageSquare,
     title: "Prompts Inteligentes",
     desc: "Mensagens prontas e personalizadas por nicho para abordar clientes com confiança.",
+    gradient: "from-secondary/20 to-secondary/5",
   },
   {
     icon: FolderOpen,
     title: "Organização de Leads",
     desc: "Controle seus contatos, acompanhe respostas e nunca perca uma oportunidade.",
+    gradient: "from-primary/20 to-secondary/5",
   },
 ];
 
 const SolutionSection = () => {
   return (
-    <section className="section-spacing">
+    <section id="solucao" className="section-spacing">
       <div className="container max-w-5xl mx-auto text-center">
         <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">
           A Solução
@@ -38,9 +41,9 @@ const SolutionSection = () => {
           {pillars.map((p, i) => (
             <div
               key={i}
-              className="glass-card p-8 text-center hover:border-primary/40 transition-colors duration-300 group"
+              className="glass-card p-8 text-center hover:border-primary/40 transition-all duration-300 group hover:-translate-y-1"
             >
-              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:glow-primary-sm transition-shadow duration-300">
+              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${p.gradient} flex items-center justify-center mx-auto mb-6 group-hover:glow-primary-sm transition-shadow duration-300`}>
                 <p.icon className="w-7 h-7 text-primary" />
               </div>
               <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>

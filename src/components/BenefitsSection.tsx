@@ -11,7 +11,7 @@ const benefits = [
 
 const BenefitsSection = () => {
   return (
-    <section className="section-spacing">
+    <section id="beneficios" className="section-spacing">
       <div className="container max-w-5xl mx-auto text-center">
         <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">
           Benefícios
@@ -23,8 +23,10 @@ const BenefitsSection = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {benefits.map((b, i) => (
-            <div key={i} className="glass-card p-6 text-left hover:border-primary/30 transition-colors duration-300">
-              <b.icon className="w-8 h-8 text-primary mb-4" />
+            <div key={i} className="glass-card p-6 text-left hover:border-primary/30 hover:-translate-y-1 transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 group-hover:glow-primary-sm transition-shadow duration-300">
+                <b.icon className="w-6 h-6 text-primary" />
+              </div>
               <h3 className="font-semibold text-lg mb-2">{b.title}</h3>
               <p className="text-muted-foreground text-sm leading-relaxed">{b.desc}</p>
             </div>
