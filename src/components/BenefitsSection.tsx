@@ -1,0 +1,38 @@
+import { Search, Mail, TrendingUp, Users, Megaphone, Sparkles } from "lucide-react";
+
+const benefits = [
+  { icon: Search, title: "Encontrar empresas automaticamente", desc: "O sistema busca leads qualificados no seu nicho." },
+  { icon: Mail, title: "Mensagens prontas por nicho", desc: "Abordagens testadas que geram respostas." },
+  { icon: TrendingUp, title: "Prospecção rápida e previsível", desc: "Saiba exatamente o que fazer todo dia." },
+  { icon: Users, title: "Organização de contatos", desc: "Nunca mais perca um lead importante." },
+  { icon: Megaphone, title: "Mais clientes sem anúncios", desc: "Prospecção orgânica e sem custo extra." },
+  { icon: Sparkles, title: "Sistema simples de usar", desc: "Funciona mesmo sem experiência em vendas." },
+];
+
+const BenefitsSection = () => {
+  return (
+    <section className="section-spacing">
+      <div className="container max-w-5xl mx-auto text-center">
+        <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">
+          Benefícios
+        </p>
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-14">
+          Tudo que você precisa para{" "}
+          <span className="gradient-text">fechar mais clientes</span>
+        </h2>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {benefits.map((b, i) => (
+            <div key={i} className="glass-card p-6 text-left hover:border-primary/30 transition-colors duration-300">
+              <b.icon className="w-8 h-8 text-primary mb-4" />
+              <h3 className="font-semibold text-lg mb-2">{b.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default BenefitsSection;

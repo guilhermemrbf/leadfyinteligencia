@@ -1,0 +1,56 @@
+import { Target, MessageSquare, FolderOpen } from "lucide-react";
+
+const pillars = [
+  {
+    icon: Target,
+    title: "Prospecção Automática",
+    desc: "Encontre empresas que precisam de apps no seu nicho, sem pesquisar manualmente.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Prompts Inteligentes",
+    desc: "Mensagens prontas e personalizadas por nicho para abordar clientes com confiança.",
+  },
+  {
+    icon: FolderOpen,
+    title: "Organização de Leads",
+    desc: "Controle seus contatos, acompanhe respostas e nunca perca uma oportunidade.",
+  },
+];
+
+const SolutionSection = () => {
+  return (
+    <section className="section-spacing">
+      <div className="container max-w-5xl mx-auto text-center">
+        <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-sm">
+          A Solução
+        </p>
+        <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
+          Conheça o{" "}
+          <span className="gradient-text">Leadfy Inteligência</span>
+        </h2>
+        <p className="text-muted-foreground text-lg mb-16 max-w-2xl mx-auto">
+          A única plataforma que une prospecção, prompts e organização de leads —
+          feita sob medida para quem cria e vende apps.
+        </p>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {pillars.map((p, i) => (
+            <div
+              key={i}
+              className="glass-card p-8 text-center hover:border-primary/40 transition-colors duration-300 group"
+            >
+              <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-5 group-hover:glow-primary-sm transition-shadow duration-300">
+                <p.icon className="w-7 h-7 text-primary" />
+              </div>
+              <h3 className="font-display text-xl font-bold mb-3">{p.title}</h3>
+              <p className="text-muted-foreground leading-relaxed">{p.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default SolutionSection;
