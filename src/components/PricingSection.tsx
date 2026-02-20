@@ -50,7 +50,9 @@ const PricingSection = () => {
                 ))}
               </ul>
               <a
-                href="#"
+                href="https://pay.cakto.com.br/4fuejyf_776810"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex w-full items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold py-3.5 md:py-4 rounded-xl text-center glow-primary hover:brightness-110 active:scale-[0.98] transition-all duration-300"
               >
                 Começar Agora
@@ -81,7 +83,9 @@ const PricingSection = () => {
                 </li>
               </ul>
               <a
-                href="#"
+                href="https://pay.cakto.com.br/cz2hi5z_776929"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block w-full border border-primary text-primary font-semibold py-3.5 md:py-4 rounded-xl text-center hover:bg-primary/10 active:scale-[0.98] transition-all duration-300"
               >
                 Garantir Acesso Vitalício
