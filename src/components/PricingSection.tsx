@@ -70,7 +70,9 @@ const PricingSection = () => {
                 <span className="font-display text-4xl md:text-5xl font-extrabold">R$ 149</span>
                 <span className="text-xl md:text-2xl font-bold text-muted-foreground">,99</span>
                 <span className="text-muted-foreground"> /único</span>
-                <p className="text-sm text-muted-foreground mt-1">ou 12x de <span className="font-semibold text-foreground">R$ 17,33</span></p>
+                <p className="text-base md:text-lg text-muted-foreground mt-2">
+                  ou até <span className="font-bold text-foreground text-lg md:text-xl">12x</span> de <span className="font-bold text-foreground text-lg md:text-xl">R$ 17,33</span>
+                </p>
               </div>
               <ul className="space-y-2.5 md:space-y-3 text-left mb-6 md:mb-8">
                 {features.map((f, i) =>
