@@ -159,7 +159,7 @@ const HeroSection = () => {
               <AICodeAnimation />
               <div className="mt-4 glass-card p-4 border-primary/20">
                 <div className="flex items-center gap-3">
-                  <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <p className="text-xs text-muted-foreground">
                     <span className="text-foreground font-semibold">247 pessoas</span> estão criando apps agora
                   </p>

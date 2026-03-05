@@ -33,8 +33,8 @@ const AICodeAnimation = () => {
       {/* Terminal header */}
       <div className="flex items-center gap-2 mb-4 pb-3 border-b border-border/30">
         <div className="w-3 h-3 rounded-full bg-destructive/60" />
-        <div className="w-3 h-3 rounded-full bg-yellow-500/60" />
-        <div className="w-3 h-3 rounded-full bg-green-500/60" />
+        <div className="w-3 h-3 rounded-full bg-primary/60" />
+        <div className="w-3 h-3 rounded-full bg-accent/60" />
         <span className="text-muted-foreground text-[10px] ml-2">leadfy-ai-builder.ts</span>
       </div>
 
