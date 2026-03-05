@@ -113,7 +113,7 @@ const ModulesCarousel = () => {
                   return (
                     <div
                       key={i}
-                      className="flex-[0_0_80%] sm:flex-[0_0_50%] md:flex-[0_0_38%] min-w-0 px-3"
+                      className="flex-[0_0_75%] sm:flex-[0_0_50%] md:flex-[0_0_38%] min-w-0 px-2 md:px-3"
                     >
                       <div
                         className={`glass-card overflow-hidden transition-all duration-500 group cursor-pointer ${
@@ -170,18 +170,18 @@ const ModulesCarousel = () => {
             <button
               onClick={() => emblaApi?.scrollPrev()}
               disabled={!canScrollPrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center justify-center text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all disabled:opacity-30"
+              className="absolute left-1 md:left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-12 md:h-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center justify-center text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all disabled:opacity-30"
               aria-label="Módulo anterior"
             >
-              <ChevronLeft className="w-5 h-5" />
+              <ChevronLeft className="w-4 h-4 md:w-5 md:h-5" />
             </button>
             <button
               onClick={() => emblaApi?.scrollNext()}
               disabled={!canScrollNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-10 w-10 h-10 md:w-12 md:h-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center justify-center text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all disabled:opacity-30"
+              className="absolute right-1 md:right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 md:w-12 md:h-12 rounded-full bg-background/80 backdrop-blur-sm border border-border/50 flex items-center justify-center text-foreground hover:bg-primary/20 hover:border-primary/40 transition-all disabled:opacity-30"
               aria-label="Próximo módulo"
             >
-              <ChevronRight className="w-5 h-5" />
+              <ChevronRight className="w-4 h-4 md:w-5 md:h-5" />
             </button>
           </div>
 
