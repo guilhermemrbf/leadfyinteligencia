@@ -1,4 +1,5 @@
 import AnimatedSection from "./AnimatedSection";
+import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
   { value: 500, suffix: "+", label: "Pessoas já faturando com o Leadfy" },
@@ -6,18 +7,6 @@ const stats = [
   { value: 15, suffix: " min", label: "Por dia para fechar clientes novos" },
   { value: 98, suffix: "%", label: "De satisfação — quase ninguém cancela" },
 ];
-
-const StatItem = ({ value, suffix, label }: { value: number; suffix: string; label: string }) => {
-  return (
-    <div className="text-center">
-      <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text mb-2">
-        {value}
-        <span>{suffix}</span>
-      </div>
-      <p className="text-muted-foreground text-sm">{label}</p>
-    </div>
-  );
-};
 
 const StatsSection = () => {
   return (
@@ -40,7 +29,12 @@ const StatsSection = () => {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
           {stats.map((s, i) => (
             <AnimatedSection key={i} delay={i * 150}>
-              <StatItem {...s} />
+              <div className="text-center">
+                <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text mb-2">
+                  <AnimatedCounter end={s.value} suffix={s.suffix} />
+                </div>
+                <p className="text-muted-foreground text-sm">{s.label}</p>
+              </div>
             </AnimatedSection>
           ))}
         </div>

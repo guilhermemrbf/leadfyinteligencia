@@ -12,10 +12,16 @@ import BonusSection from "@/components/BonusSection";
 import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import FooterCTA from "@/components/FooterCTA";
+import FloatingParticles from "@/components/FloatingParticles";
+import StickyCtaBar from "@/components/StickyCtaBar";
+import SocialProofPopup from "@/components/SocialProofPopup";
 
 const Index = () => {
   return (
-    <div className="gradient-bg min-h-screen">
+    <div className="gradient-bg min-h-screen relative">
+      <FloatingParticles />
+      <SocialProofPopup />
+      <StickyCtaBar />
       <Navbar />
       <HeroSection />
       <OpportunitySection />
