@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Shield, Zap, Users } from "lucide-react";
+import { ArrowRight, Play, Shield, Zap, Users, Clock, Flame } from "lucide-react";
 import heroMockup from "@/assets/leadfy-hero-mockup.png";
 
 const tabs = ["Dashboard", "Prospecção", "Prompts", "Contatos", "Assistente"];
@@ -12,28 +12,39 @@ const HeroSection = () => {
 
       <div className="container max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-10 md:mb-16">
+          {/* Urgency badge */}
+          <div className="inline-flex items-center gap-2 border border-destructive/40 bg-destructive/10 backdrop-blur-sm px-4 py-1.5 md:px-5 md:py-2 rounded-full mb-4 animate-fade-up">
+            <Flame className="w-3.5 h-3.5 text-destructive animate-pulse" />
+            <span className="text-xs md:text-sm text-destructive font-bold">VAGAS LIMITADAS — Condição especial pode sair do ar a qualquer momento</span>
+          </div>
+
           {/* Social proof badge */}
           <div className="inline-flex items-center gap-2 border border-primary/30 bg-primary/5 backdrop-blur-sm px-4 py-1.5 md:px-5 md:py-2 rounded-full mb-8 md:mb-10 animate-fade-up">
             <Users className="w-3.5 h-3.5 text-primary" />
-            <span className="text-xs md:text-sm text-primary font-medium">+500 pessoas já estão criando e vendendo apps</span>
+            <span className="text-xs md:text-sm text-primary font-medium">+500 pessoas já largaram o emprego e faturam com apps</span>
           </div>
 
           <h1 className="font-display text-[2rem] sm:text-4xl md:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.1] mb-5 md:mb-7 max-w-5xl mx-auto animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            Crie apps com IA e venda para empresas —{" "}
-            <span className="gradient-text">mesmo sem saber programar</span>
+            Enquanto você pensa,{" "}
+            <span className="gradient-text">outros já estão faturando R$ 10K/mês</span>{" "}
+            vendendo apps com IA
           </h1>
 
-          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8 md:mb-10 leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
-            O Leadfy te guia da ideia ao primeiro cliente: encontre oportunidades, gere apps prontos e receba abordagens de venda personalizadas. Tudo em uma plataforma.
+          <p className="text-base md:text-xl text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed animate-fade-up" style={{ animationDelay: "0.2s" }}>
+            Sem programar. Sem experiência. Sem desculpas. O Leadfy te entrega o app pronto, os clientes certos e as mensagens que vendem. <strong className="text-foreground">Você só precisa clicar em "enviar".</strong>
+          </p>
+
+          <p className="text-sm md:text-base text-destructive font-semibold mb-8 md:mb-10 animate-fade-up" style={{ animationDelay: "0.25s" }}>
+            ⚠️ Cada dia sem o Leadfy é dinheiro que você está deixando na mesa.
           </p>
 
           {/* Dual CTA */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-5 md:mb-6 animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <a
               href="#preco"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-semibold text-base md:text-lg px-7 md:px-8 py-3.5 md:py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold text-base md:text-lg px-7 md:px-8 py-3.5 md:py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 animate-glow-pulse"
             >
-              Quero começar a vender apps
+              🔥 QUERO FATURAR COM APPS AGORA
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
@@ -49,23 +60,24 @@ const HeroSection = () => {
           <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 text-[0.65rem] md:text-xs text-muted-foreground uppercase tracking-widest animate-fade-up" style={{ animationDelay: "0.35s" }}>
             <span className="flex items-center gap-1.5">
               <Zap className="w-3 md:w-3.5 h-3 md:h-3.5" />
-              Sem experiência necessária
+              Zero experiência necessária
             </span>
             <span className="text-border">•</span>
             <span className="flex items-center gap-1.5">
               <Shield className="w-3 md:w-3.5 h-3 md:h-3.5" />
-              Garantia de 7 dias
+              Garantia de 7 dias ou seu dinheiro de volta
             </span>
             <span className="text-border">•</span>
             <span className="flex items-center gap-1.5">
-              Cancele quando quiser
+              <Clock className="w-3 md:w-3.5 h-3 md:h-3.5" />
+              Resultados em até 7 dias
             </span>
           </div>
         </div>
 
         {/* Product showcase with tabs */}
         <div className="relative mx-auto max-w-5xl animate-fade-up" style={{ animationDelay: "0.45s" }}>
-          {/* Tabs - scrollable on mobile */}
+          {/* Tabs */}
           <div className="flex items-center justify-start md:justify-center gap-2 mb-5 md:mb-6 overflow-x-auto pb-2 scrollbar-none -mx-2 px-2">
             {tabs.map((tab, i) => (
               <span
@@ -90,7 +102,6 @@ const HeroSection = () => {
               className="relative rounded-xl md:rounded-2xl border border-border/20 shadow-2xl w-full"
               loading="eager"
             />
-            {/* Bottom fade */}
             <div className="absolute bottom-0 left-0 right-0 h-20 md:h-32 bg-gradient-to-t from-[hsl(207,58%,11%)] to-transparent rounded-b-xl md:rounded-b-2xl" />
           </div>
         </div>

@@ -4,26 +4,26 @@ import AnimatedSection from "./AnimatedSection";
 const testimonials = [
   {
     name: "Rafael Oliveira",
-    role: "Desenvolvedor de Apps",
-    text: "Em 2 semanas usando o Leadfy, fechei 3 clientes novos. Os prompts prontos fizeram toda a diferença — eu sabia o que dizer em cada abordagem.",
+    role: "Faturou R$ 8K no primeiro mês",
+    text: "Em 2 semanas usando o Leadfy, fechei 3 clientes. Os prompts prontos são absurdos — eu sabia exatamente o que dizer. Hoje faturo mais que no meu antigo emprego CLT.",
     stars: 5,
   },
   {
     name: "Ana Paula Lima",
-    role: "Iniciante — nunca tinha programado",
-    text: "Eu achava que precisava saber programar pra vender apps. Com o Leadfy, criei meu primeiro app com IA e fechei um cliente em 10 dias. Mudou minha vida.",
+    role: "Nunca tinha programado na vida",
+    text: "Eu achava que era impossível pra mim. Com o Leadfy, criei meu primeiro app em 20 minutos e fechei um cliente em 10 dias por R$ 3.500. Chorei de felicidade.",
     stars: 5,
   },
   {
     name: "Bruno Mendes",
-    role: "Fundador de Agência Digital",
-    text: "O sistema é absurdamente simples. Em 15 minutos por dia eu encontro leads qualificados e envio mensagens personalizadas. Meu faturamento dobrou em 3 meses.",
+    role: "Dobrou o faturamento da agência",
+    text: "15 minutos por dia. Isso é o que eu gasto prospectando com o Leadfy. Meu faturamento dobrou em 3 meses e eu demiti 2 ferramentas que não serviam pra nada.",
     stars: 5,
   },
   {
     name: "Juliana Costa",
-    role: "Freelancer — começou do zero",
-    text: "Já tentei de tudo: anúncios, cold email genérico, indicações... Nada funcionava. Com o Leadfy eu finalmente tenho um método previsível e consigo fechar clientes toda semana.",
+    role: "Saiu do zero e hoje fatura R$ 12K/mês",
+    text: "Já tentei de tudo: anúncios, cold email, indicações... Nada funcionava. Com o Leadfy eu finalmente tenho previsibilidade. Fecho 2 a 3 clientes por semana.",
     stars: 5,
   },
 ];
@@ -35,14 +35,14 @@ const TestimonialsSection = () => {
         <AnimatedSection>
           <div className="text-center mb-10 md:mb-14">
             <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-              Quem já usa, recomenda
+              🏆 Prova Social Irrefutável
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-              Resultados reais de{" "}
-              <span className="gradient-text">pessoas reais</span>
+              Pessoas comuns faturando{" "}
+              <span className="gradient-text">valores extraordinários</span>
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-              De iniciantes a agências — veja quem já está faturando com o Leadfy.
+              Eles estavam na mesma situação que você. A diferença? <strong className="text-foreground">Eles decidiram agir.</strong>
             </p>
           </div>
         </AnimatedSection>
@@ -69,7 +69,7 @@ const TestimonialsSection = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-sm">{t.name}</p>
-                    <p className="text-muted-foreground text-xs">{t.role}</p>
+                    <p className="text-primary text-xs font-semibold">{t.role}</p>
                   </div>
                 </div>
               </div>

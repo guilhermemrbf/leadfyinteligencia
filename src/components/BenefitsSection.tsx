@@ -1,13 +1,13 @@
-import { Search, Mail, TrendingUp, Users, Sparkles, Shield } from "lucide-react";
+import { Search, Mail, TrendingUp, Users, Sparkles, Shield, ArrowRight } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const benefits = [
-  { icon: Sparkles, title: "Crie apps sem programar", desc: "Use IA para gerar apps funcionais em minutos, sem escrever uma linha de código." },
-  { icon: Search, title: "Encontre empresas automaticamente", desc: "O sistema busca leads qualificados no seu nicho todos os dias." },
-  { icon: Mail, title: "Mensagens de venda prontas", desc: "Abordagens testadas e personalizadas por nicho que geram respostas." },
-  { icon: TrendingUp, title: "Prospecção rápida e previsível", desc: "Saiba exatamente o que fazer todo dia para fechar clientes." },
-  { icon: Users, title: "Funciona para iniciantes", desc: "Não precisa de experiência em vendas ou programação para começar." },
-  { icon: Shield, title: "Método validado", desc: "Centenas de pessoas já estão faturando com apps usando o Leadfy." },
+  { icon: Sparkles, title: "Apps profissionais em minutos", desc: "A IA cria apps que parecem ter custado R$ 50 mil. Seu cliente nunca vai saber que levou 15 minutos." },
+  { icon: Search, title: "Leads qualificados todo dia", desc: "O sistema encontra empresas que PRECISAM de um app — e te entrega de bandeja. Zero esforço." },
+  { icon: Mail, title: "Mensagens que vendem sozinhas", desc: "Copy testada e otimizada por nicho. Taxa de resposta 3x maior que cold email tradicional." },
+  { icon: TrendingUp, title: "Faturamento previsível", desc: "Saiba exatamente o que fazer todo dia. Sem achismo. Sem sorte. Método puro." },
+  { icon: Users, title: "Feito pra quem começa do zero", desc: "Não sabe programar? Nunca vendeu? Perfeito. O Leadfy foi construído pra VOCÊ." },
+  { icon: Shield, title: "Método comprovado por +500 pessoas", desc: "Não é teoria. São centenas de pessoas reais faturando com apps. Os resultados estão aí." },
 ];
 
 const BenefitsSection = () => {
@@ -16,12 +16,15 @@ const BenefitsSection = () => {
       <div className="container max-w-5xl mx-auto text-center">
         <AnimatedSection>
           <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-            Benefícios
+            💎 Por que o Leadfy é Imbatível
           </p>
-          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-10 md:mb-14">
+          <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
             Tudo que você precisa para{" "}
-            <span className="gradient-text">criar, vender e faturar</span>
+            <span className="gradient-text">faturar de R$ 5K a R$ 30K por mês</span>
           </h2>
+          <p className="text-muted-foreground text-base md:text-lg mb-10 md:mb-14 max-w-2xl mx-auto">
+            E o melhor: você não precisa de talento especial, conexões ou investimento alto. Só precisa de vontade e do Leadfy.
+          </p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
@@ -37,6 +40,18 @@ const BenefitsSection = () => {
             </AnimatedSection>
           ))}
         </div>
+
+        <AnimatedSection delay={600}>
+          <div className="mt-10 md:mt-14">
+            <a
+              href="#preco"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold text-base px-8 py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              GARANTIR MINHA VAGA AGORA
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

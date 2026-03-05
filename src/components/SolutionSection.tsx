@@ -1,4 +1,4 @@
-import { Lightbulb, Rocket, MessageSquare } from "lucide-react";
+import { Lightbulb, Rocket, MessageSquare, ArrowRight } from "lucide-react";
 import productImg from "@/assets/leadfy-product.png";
 import AnimatedSection from "./AnimatedSection";
 
@@ -6,22 +6,22 @@ const pillars = [
   {
     icon: Lightbulb,
     num: "01",
-    title: "Descubra Oportunidades",
-    desc: "A IA identifica nichos lucrativos e empresas que precisam de um app — sem você pesquisar manualmente.",
+    title: "Descubra Nichos que Pagam Caro",
+    desc: "A IA encontra empresas desesperadas por um app — nichos onde você pode cobrar R$ 2K a R$ 10K por projeto.",
     gradient: "from-primary/20 to-primary/5",
   },
   {
     icon: Rocket,
     num: "02",
-    title: "Crie Apps com IA",
-    desc: "Gere apps funcionais para qualquer nicho usando inteligência artificial, mesmo sem saber programar.",
+    title: "Crie o App em Minutos",
+    desc: "Sem digitar uma linha de código. A IA gera apps profissionais que parecem ter custado R$ 50 mil para desenvolver.",
     gradient: "from-secondary/20 to-secondary/5",
   },
   {
     icon: MessageSquare,
     num: "03",
-    title: "Venda com Confiança",
-    desc: "Receba abordagens prontas e personalizadas por nicho para fechar seus primeiros clientes.",
+    title: "Feche Clientes no Automático",
+    desc: "Mensagens de venda prontas, testadas e irresistíveis. O cliente lê e PRECISA responder. É quase injusto.",
     gradient: "from-primary/20 to-secondary/5",
   },
 ];
@@ -32,14 +32,13 @@ const SolutionSection = () => {
       <div className="container max-w-5xl mx-auto text-center">
         <AnimatedSection>
           <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-            A Solução
+            🚀 A Máquina de Fazer Dinheiro
           </p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-            Da ideia ao primeiro cliente:{" "}
-            <span className="gradient-text">Descubra → Crie → Venda</span>
+            3 passos simples. <span className="gradient-text">Resultado inevitável.</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto">
-            O Leadfy é a única plataforma que te leva do zero ao faturamento — combinando IA, prospecção e abordagens de venda em um único lugar.
+            O Leadfy é a <strong className="text-foreground">única plataforma no Brasil</strong> que te leva do absoluto zero ao primeiro cliente pagante — combinando IA, prospecção e vendas em um único lugar. <span className="text-primary font-semibold">Nada parecido existe no mercado.</span>
           </p>
         </AnimatedSection>
 
@@ -70,6 +69,18 @@ const SolutionSection = () => {
             </AnimatedSection>
           ))}
         </div>
+
+        <AnimatedSection delay={500}>
+          <div className="mt-10 md:mt-14">
+            <a
+              href="#preco"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold text-base md:text-lg px-8 py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+            >
+              QUERO COMEÇAR A FATURAR AGORA
+              <ArrowRight className="w-5 h-5" />
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

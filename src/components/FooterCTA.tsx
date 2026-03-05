@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock, Flame } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 import LeadfyLogo from "./LeadfyLogo";
 
@@ -7,28 +7,37 @@ const FooterCTA = () => {
     <section className="section-spacing">
       <AnimatedSection>
         <div className="container max-w-4xl mx-auto">
-          <div className="glass-card p-10 md:p-16 text-center relative overflow-hidden">
+          <div className="glass-card p-10 md:p-16 text-center relative overflow-hidden border-primary/30">
             {/* Background glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[300px] bg-primary/8 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="relative z-10">
-              <h2 className="font-display text-3xl md:text-5xl font-bold mb-6 leading-tight">
-                Seu primeiro cliente está a{" "}
-                <span className="gradient-text">um clique de distância</span>
+              <div className="inline-flex items-center gap-2 border border-destructive/40 bg-destructive/10 px-4 py-1.5 rounded-full mb-6">
+                <Flame className="w-3.5 h-3.5 text-destructive animate-pulse" />
+                <span className="text-xs text-destructive font-bold">ÚLTIMA CHANCE</span>
+              </div>
+
+              <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-tight">
+                Daqui a 30 dias, você vai estar{" "}
+                <span className="gradient-text">faturando com apps</span>{" "}
+                ou vai estar no mesmo lugar?
               </h2>
-              <p className="text-muted-foreground text-lg mb-4 max-w-xl mx-auto">
-                Comece do zero, crie apps com IA e venda para empresas — mesmo sem experiência.
+              <p className="text-foreground text-lg font-semibold mb-2 max-w-xl mx-auto">
+                A decisão é sua. Mas o tempo não para.
               </p>
               <p className="text-muted-foreground text-sm mb-8 max-w-md mx-auto">
-                Sem risco: garantia de 7 dias. Se não gostar, devolvemos seu dinheiro.
+                Risco zero: garantia de 7 dias. Se não gostar, devolvemos 100% do seu dinheiro — sem perguntas.
               </p>
               <a
                 href="#preco"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-semibold text-lg px-10 py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold text-lg px-10 py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] transition-all duration-300 animate-glow-pulse"
               >
-                Quero meu primeiro cliente
+                🔥 SIM, QUERO MUDAR MINHA VIDA
                 <ArrowRight className="w-5 h-5" />
               </a>
+              <p className="text-xs text-muted-foreground mt-4">
+                +500 pessoas já tomaram essa decisão. <strong className="text-foreground">E você?</strong>
+              </p>
             </div>
           </div>
         </div>

@@ -5,22 +5,22 @@ const opportunities = [
   {
     icon: Building2,
     value: "70%",
-    label: "das empresas brasileiras ainda não têm um app próprio",
+    label: "das empresas NÃO têm app — estão implorando por um",
   },
   {
     icon: DollarSign,
     value: "R$ 2K–10K",
-    label: "valor médio cobrado por um app simples para negócios",
+    label: "por app simples — é o que você vai cobrar",
   },
   {
     icon: Laptop,
     value: "15 min",
-    label: "por dia para prospectar com o Leadfy",
+    label: "por dia. É tudo que você precisa investir.",
   },
   {
     icon: TrendingUp,
     value: "3x",
-    label: "mais clientes no 1º mês usando abordagens prontas",
+    label: "mais clientes já no 1º mês com o Leadfy",
   },
 ];
 
@@ -30,14 +30,14 @@ const OpportunitySection = () => {
       <div className="container max-w-5xl mx-auto text-center">
         <AnimatedSection>
           <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-            A Oportunidade
+            💰 A Oportunidade da Década
           </p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-            O mercado de apps para empresas{" "}
-            <span className="gradient-text">está explodindo</span>
+            Um mercado de <span className="gradient-text">bilhões</span> esperando{" "}
+            <span className="gradient-text">por você</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg mb-10 md:mb-14 max-w-2xl mx-auto">
-            Milhares de negócios precisam de um app e não sabem por onde começar. Quem souber criar e oferecer, vai dominar esse mercado.
+            Milhares de empresas <strong className="text-foreground">precisam desesperadamente</strong> de um app e não têm a quem recorrer. Quem souber criar e oferecer, <span className="text-primary font-semibold">vai dominar esse mercado.</span> A pergunta é: vai ser você ou seu concorrente?
           </p>
         </AnimatedSection>
 
