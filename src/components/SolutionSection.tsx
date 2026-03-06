@@ -1,5 +1,4 @@
 import { Lightbulb, Rocket, MessageSquare, ArrowRight } from "lucide-react";
-import productImg from "@/assets/leadfy-product.png";
 import AnimatedSection from "./AnimatedSection";
 
 const pillars = [
@@ -42,16 +41,6 @@ const SolutionSection = () => {
           </p>
         </AnimatedSection>
 
-        <AnimatedSection delay={100}>
-          <div className="relative mx-auto max-w-4xl mb-12 md:mb-16">
-            <div className="absolute inset-0 bg-primary/5 rounded-xl md:rounded-2xl blur-3xl scale-105" />
-            <img
-              src={productImg}
-              alt="Leadfy Inteligência — plataforma desktop e mobile"
-              className="relative rounded-xl md:rounded-2xl border border-border/20 shadow-2xl w-full"
-            />
-          </div>
-        </AnimatedSection>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
           {pillars.map((p, i) => (
