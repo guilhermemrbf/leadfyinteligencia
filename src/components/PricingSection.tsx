@@ -1,13 +1,15 @@
-import { Check, Star, ArrowRight, Flame, Shield, Clock } from "lucide-react";
+import { Check, Star, ArrowRight, Flame, Shield, Clock, Brain, Search, Users } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const features = [
-  "Prospecção inteligente de leads",
-  "Prompts personalizados por nicho",
-  "Organização de contatos",
+  "IA integrada da Leadfy para criar apps",
+  "Melhor prospector de leads do mercado",
+  "Área de membros com método completo",
+  "Abordagens prontas por nicho",
+  "Painel ADM e gestão de contatos",
+  "Domínio e marca própria",
   "Todos os bônus inclusos (R$ 865)",
-  "Suporte via comunidade exclusiva",
-  "Atualizações contínuas e vitalícias",
+  "Atualizações vitalícias",
 ];
 
 const PricingSection = () => {
@@ -23,7 +25,7 @@ const PricingSection = () => {
             Quanto vale mudar de vida?
           </h2>
           <p className="text-muted-foreground mb-3 max-w-xl mx-auto text-sm md:text-base">
-            Um único cliente paga <strong className="text-foreground">anos</strong> de Leadfy. Você está literalmente a uma decisão de distância de um novo patamar financeiro.
+            Um único cliente paga <strong className="text-foreground">anos</strong> de Leadfy. Você está a uma decisão de distância de um novo patamar financeiro.
           </p>
           <p className="text-primary font-semibold mb-10 md:mb-14 text-sm md:text-base">
             ⚡ Quem entra hoje garante o menor preço. Amanhã pode ser tarde demais.
@@ -49,6 +51,20 @@ const PricingSection = () => {
                 <span className="text-muted-foreground">/mês</span>
               </div>
               <p className="text-xs text-primary font-semibold mb-5">🔥 Economia de 59% — só enquanto durar</p>
+
+              {/* Key differentiators */}
+              <div className="flex items-center justify-center gap-3 mb-5 flex-wrap">
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Brain className="w-3 h-3" /> IA Integrada
+                </span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Search className="w-3 h-3" /> Prospector #1
+                </span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Users className="w-3 h-3" /> Área de Membros
+                </span>
+              </div>
+
               <ul className="space-y-2.5 md:space-y-3 text-left mb-6 md:mb-8">
                 {features.map((f, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm">
@@ -94,6 +110,20 @@ const PricingSection = () => {
                 </p>
               </div>
               <p className="text-xs text-primary font-semibold mb-5">💎 Economia de 70% — nunca mais paga nada</p>
+
+              {/* Key differentiators */}
+              <div className="flex items-center justify-center gap-3 mb-5 flex-wrap">
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Brain className="w-3 h-3" /> IA Integrada
+                </span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Search className="w-3 h-3" /> Prospector #1
+                </span>
+                <span className="inline-flex items-center gap-1 text-[10px] font-bold text-primary bg-primary/10 px-2 py-1 rounded-full border border-primary/20">
+                  <Users className="w-3 h-3" /> Área de Membros
+                </span>
+              </div>
+
               <ul className="space-y-2.5 md:space-y-3 text-left mb-6 md:mb-8">
                 {features.map((f, i) => (
                   <li key={i} className="flex items-center gap-3 text-sm">

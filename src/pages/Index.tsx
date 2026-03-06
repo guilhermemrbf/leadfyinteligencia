@@ -1,10 +1,10 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import OpportunitySection from "@/components/OpportunitySection";
-import StepsSection from "@/components/StepsSection";
 import PainSection from "@/components/PainSection";
 import SolutionSection from "@/components/SolutionSection";
-import BenefitsSection from "@/components/BenefitsSection";
+import StepsSection from "@/components/StepsSection";
+import FeaturesSection from "@/components/FeaturesSection";
 import ModulesCarousel from "@/components/ModulesCarousel";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
@@ -24,8 +24,8 @@ const Index = () => {
       <PainSection />
       <SolutionSection />
       <StepsSection />
+      <FeaturesSection />
       <ModulesCarousel />
-      <BenefitsSection />
       <StatsSection />
       <TestimonialsSection />
       <BonusSection />
