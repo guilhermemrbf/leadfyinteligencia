@@ -1,4 +1,4 @@
-import { MapPin, Phone, Globe, ArrowRight } from "lucide-react";
+import { MapPin, Globe, ArrowRight, Lock } from "lucide-react";
 import AnimatedSection from "./AnimatedSection";
 
 const leads = [
@@ -55,21 +55,22 @@ const LeadsShowcase = () => {
         <AnimatedSection>
           <div className="text-center mb-10 md:mb-14">
             <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-              Oportunidades reais
+              Oportunidades reais encontradas pelo prospector
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-              Empresas <span className="gradient-text">esperando por você</span>
+              Empresas <span className="gradient-text">desesperadas por um app</span>
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
-              O prospector encontra leads assim todos os dias. Assine e tenha acesso completo.
+              O prospector encontra leads como esses <strong className="text-foreground">todos os dias</strong>. 
+              Assine e tenha acesso completo a contatos e valores.
             </p>
           </div>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
           {leads.map((lead, i) => (
-            <AnimatedSection key={i} delay={i * 100}>
-              <div className="glass-card p-5 md:p-6 hover-card-glow hover-inner-glow group h-full">
+            <AnimatedSection key={i} delay={i * 100} animation="scale-in">
+              <div className="glass-card p-5 md:p-6 hover-card-glow hover-inner-glow group h-full relative overflow-hidden">
                 {/* Header */}
                 <div className="flex items-center justify-between mb-3">
                   <h3 className="font-display font-bold text-base md:text-lg group-hover:text-primary transition-colors duration-300">
@@ -86,16 +87,16 @@ const LeadsShowcase = () => {
                 </div>
 
                 {/* Value */}
-                <div className="flex items-center gap-4 mb-3">
+                <div className="flex items-center gap-5 mb-3">
                   <div>
-                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">Valor Estimado</p>
+                    <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">💰 Valor Estimado</p>
                     <p className="text-sm font-bold">
                       R$ {lead.minValue} <span className="text-muted-foreground font-normal">—</span> R$ {lead.maxValue}
                     </p>
                   </div>
                   {lead.recurrence > 0 && (
                     <div>
-                      <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">Recorrência</p>
+                      <p className="text-[10px] text-muted-foreground uppercase tracking-wider mb-0.5">📈 Recorrência</p>
                       <p className="text-sm font-bold text-primary">+R$ {lead.recurrence}/mês</p>
                     </div>
                   )}
@@ -125,9 +126,12 @@ const LeadsShowcase = () => {
                   ))}
                 </div>
 
-                {/* Blur overlay */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-card/90 to-transparent rounded-b-xl flex items-end justify-center pb-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-[10px] text-primary font-semibold">🔒 Assine para ver contatos</span>
+                {/* Lock overlay on hover */}
+                <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-card to-transparent rounded-b-xl flex items-end justify-center pb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <span className="inline-flex items-center gap-1.5 text-xs text-primary font-semibold bg-primary/10 px-3 py-1 rounded-full border border-primary/20">
+                    <Lock className="w-3 h-3" />
+                    Assine para ver contatos
+                  </span>
                 </div>
               </div>
             </AnimatedSection>
@@ -140,7 +144,7 @@ const LeadsShowcase = () => {
               href="#preco"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-bold text-sm md:text-base px-8 py-3.5 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
             >
-              Desbloquear Todos os Leads
+              DESBLOQUEAR TODOS OS LEADS
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>
