@@ -39,7 +39,7 @@ const TestimonialsSection = () => {
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
               Pessoas comuns faturando{" "}
-              <span className="gradient-text">valores extraordinários</span>
+              <span className="gradient-text-animated">valores extraordinários</span>
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-xl mx-auto">
               Eles estavam na mesma situação que você. A diferença? <strong className="text-foreground">Eles decidiram agir.</strong>
