@@ -56,8 +56,8 @@ const HeroSection = () => {
               {/* Browser chrome */}
               <div className="flex items-center gap-1.5 px-3 py-2 border-b border-border/30">
                 <div className="w-2.5 h-2.5 rounded-full bg-destructive/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
-                <div className="w-2.5 h-2.5 rounded-full bg-green-500/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-accent/60" />
+                <div className="w-2.5 h-2.5 rounded-full bg-primary/60" />
                 <div className="flex-1 flex justify-center">
                   <span className="text-[10px] text-muted-foreground bg-muted/30 px-3 py-0.5 rounded-md">leadfy.com.br</span>
                 </div>
