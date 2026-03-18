@@ -35,7 +35,7 @@ const SolutionSection = () => {
             🚀 A Máquina de Fazer Dinheiro
           </p>
           <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-            3 passos simples. <span className="gradient-text-animated">Resultado inevitável.</span>
+            3 passos simples. <span className="gradient-text">Resultado inevitável.</span>
           </h2>
           <p className="text-muted-foreground text-base md:text-lg mb-10 md:mb-12 max-w-2xl mx-auto">
             O Leadfy é a <strong className="text-foreground">única plataforma no Brasil</strong> que te leva do absoluto zero ao primeiro cliente pagante — combinando IA, prospecção e vendas em um único lugar. <span className="text-primary font-semibold">Nada parecido existe no mercado.</span>

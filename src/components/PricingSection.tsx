@@ -34,7 +34,7 @@ const PricingSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 max-w-3xl mx-auto">
           <AnimatedSection delay={0}>
-            <div className="glass-card p-6 md:p-8 relative border-primary/50 hover-card-glow group h-full animate-border-glow" style={{ boxShadow: "0 0 15px hsl(199 75% 48% / 0.15), 0 0 30px hsl(199 75% 48% / 0.08)" }}>
+            <div className="glass-card p-6 md:p-8 relative border-primary/50 hover-card-glow group h-full" style={{ boxShadow: "0 0 15px hsl(199 75% 48% / 0.15), 0 0 30px hsl(199 75% 48% / 0.08)" }}>
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
                 <span className="bg-primary text-primary-foreground text-xs font-bold px-4 py-1 rounded-full flex items-center gap-1 shadow-lg">
                   <Flame className="w-3 h-3" /> Mais Escolhido

@@ -67,7 +67,7 @@ const FeaturesSection = () => {
               🔥 Tudo Que Você Precisa Num Só Lugar
             </p>
             <h2 className="font-display text-2xl sm:text-3xl md:text-5xl font-bold mb-4">
-              A plataforma <span className="gradient-text-animated">mais completa</span> do Brasil
+              A plataforma <span className="gradient-text">mais completa</span> do Brasil
             </h2>
             <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
               IA própria, prospector inteligente, área de membros e método validado — nenhum concorrente entrega tudo isso.
@@ -75,11 +75,11 @@ const FeaturesSection = () => {
           </div>
         </AnimatedSection>
 
-        {/* Top 3 highlighted features with float on hover */}
+        {/* Top 3 highlighted features */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 mb-4 md:mb-5">
           {features.filter(f => f.highlight).map((f, i) => (
             <AnimatedSection key={i} delay={i * 100}>
-              <div className="glass-card p-5 md:p-6 text-center hover-card-glow hover-inner-glow group h-full border-primary/20 animate-border-glow" style={{ animationDelay: `${i * 1}s` }}>
+              <div className="glass-card p-5 md:p-6 text-center hover-card-glow hover-inner-glow group h-full border-primary/20">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-primary/15 flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/25 group-hover:shadow-[0_0_20px_hsl(199_75%_48%/0.3)] transition-all duration-300">
                   <f.icon className="w-6 h-6 md:w-7 md:h-7 text-primary group-hover:scale-110 transition-transform duration-300" />
                 </div>

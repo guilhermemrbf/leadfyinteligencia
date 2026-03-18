@@ -1,25 +1,37 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ProblemSection from "@/components/ProblemSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
+import OpportunitySection from "@/components/OpportunitySection";
+import PainSection from "@/components/PainSection";
+import SolutionSection from "@/components/SolutionSection";
+import StepsSection from "@/components/StepsSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import ModulesCarousel from "@/components/ModulesCarousel";
 import StatsSection from "@/components/StatsSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import BonusSection from "@/components/BonusSection";
+import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
-import CTASection from "@/components/CTASection";
-import Footer from "@/components/Footer";
+import FooterCTA from "@/components/FooterCTA";
+import SocialProofPopup from "@/components/SocialProofPopup";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
+    <div className="gradient-bg min-h-screen relative">
+      <SocialProofPopup />
       <Navbar />
       <HeroSection />
-      <ProblemSection />
-      <HowItWorksSection />
+      <OpportunitySection />
+      <PainSection />
+      <SolutionSection />
+      <StepsSection />
+      <FeaturesSection />
+      <ModulesCarousel />
       <StatsSection />
       <TestimonialsSection />
+      <BonusSection />
+      <PricingSection />
       <FAQSection />
-      <CTASection />
-      <Footer />
+      <FooterCTA />
     </div>
   );
 };
