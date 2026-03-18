@@ -19,7 +19,7 @@ const FooterCTA = () => {
 
               <h2 className="font-display text-3xl md:text-5xl font-bold mb-4 leading-tight">
                 Daqui a 30 dias, você vai estar{" "}
-                <span className="gradient-text">faturando com apps</span>{" "}
+                <span className="gradient-text-animated">faturando com apps</span>{" "}
                 ou vai estar no mesmo lugar?
               </h2>
               <p className="text-foreground text-lg font-semibold mb-2 max-w-xl mx-auto">

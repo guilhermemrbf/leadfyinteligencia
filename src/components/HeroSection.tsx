@@ -1,13 +1,24 @@
-import { ArrowRight, Play, Shield, Zap, Users, Clock, Flame } from "lucide-react";
+import { ArrowRight, Play, Shield, Zap, Users, Clock, Flame, Star, Sparkles } from "lucide-react";
 import heroMockup from "@/assets/leadfy-hero-mockup.png";
 import AICodeAnimation from "./AICodeAnimation";
 
 const tabs = ["Dashboard", "Prospecção", "Prompts", "Contatos", "Assistente"];
 
+const marqueeItems = [
+  "Sem experiência necessária",
+  "Garantia de 7 dias",
+  "IA integrada exclusiva",
+  "Prospector #1 do mercado",
+  "Área de membros completa",
+  "Suporte prioritário",
+  "Atualizações vitalícias",
+  "Resultados em 7 dias",
+];
+
 const HeroSection = () => {
   return (
     <section className="relative min-h-[100svh] flex flex-col items-center justify-center px-4 py-20 pt-24 md:pt-32 overflow-hidden">
-      {/* Background effects — single blur for perf */}
+      {/* Background effects */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] md:w-[800px] h-[350px] md:h-[500px] bg-primary/6 rounded-full blur-[120px] md:blur-[160px] pointer-events-none" />
 
       <div className="container max-w-6xl mx-auto relative z-10">
@@ -26,7 +37,7 @@ const HeroSection = () => {
 
           <h1 className="font-display text-[1.6rem] sm:text-3xl md:text-6xl lg:text-[4.5rem] font-extrabold leading-[1.1] mb-4 md:mb-7 max-w-5xl mx-auto animate-fade-up" style={{ animationDelay: "0.1s" }}>
             Enquanto você pensa,{" "}
-            <span className="gradient-text">outros já estão faturando R$ 10K/mês</span>{" "}
+            <span className="gradient-text-animated">outros já estão faturando R$ 10K/mês</span>{" "}
             vendendo apps com IA
           </h1>
 
@@ -39,7 +50,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6 animate-fade-up" style={{ animationDelay: "0.25s" }}>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-6 md:mb-8 animate-fade-up" style={{ animationDelay: "0.25s" }}>
             <a
               href="#preco"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground font-bold text-sm md:text-lg px-6 md:px-8 py-3 md:py-4 rounded-xl glow-primary hover:brightness-110 hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 animate-glow-pulse"
@@ -56,27 +67,23 @@ const HeroSection = () => {
             </a>
           </div>
 
-          {/* Trust badges */}
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-6 text-[0.6rem] md:text-xs text-muted-foreground uppercase tracking-wider animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <span className="flex items-center gap-1">
-              <Zap className="w-3 h-3" />
-              Sem experiência
-            </span>
-            <span className="text-border hidden sm:inline">•</span>
-            <span className="flex items-center gap-1">
-              <Shield className="w-3 h-3" />
-              Garantia 7 dias
-            </span>
-            <span className="text-border hidden sm:inline">•</span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-3 h-3" />
-              Resultados em 7 dias
-            </span>
+          {/* Marquee trust ticker — inspired by ZOD */}
+          <div className="relative overflow-hidden py-3 md:py-4 animate-fade-up" style={{ animationDelay: "0.3s" }}>
+            <div className="absolute left-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-r from-[hsl(207,58%,11%)] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-12 md:w-20 bg-gradient-to-l from-[hsl(207,58%,11%)] to-transparent z-10 pointer-events-none" />
+            <div className="flex animate-marquee whitespace-nowrap">
+              {[...marqueeItems, ...marqueeItems].map((item, i) => (
+                <span key={i} className="inline-flex items-center gap-1.5 mx-3 md:mx-5 text-[10px] md:text-xs text-muted-foreground uppercase tracking-wider shrink-0">
+                  <Sparkles className="w-3 h-3 text-primary/60" />
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Two-column: Product + AI Code */}
-        <div className="relative mx-auto max-w-6xl animate-fade-up" style={{ animationDelay: "0.4s" }}>
+        <div className="relative mx-auto max-w-6xl animate-scale-in" style={{ animationDelay: "0.4s" }}>
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-4 md:gap-6 items-start">
             {/* Product showcase */}
             <div className="lg:col-span-3 order-2 lg:order-1">
@@ -96,25 +103,27 @@ const HeroSection = () => {
                 ))}
               </div>
 
-              <div className="relative">
+              <div className="relative group">
                 <div className="absolute inset-0 bg-primary/5 rounded-xl blur-2xl scale-105" />
-                <img
-                  src={heroMockup}
-                  alt="Leadfy Inteligência — plataforma de prospecção e abordagens para vendedores de apps"
-                  className="relative rounded-xl md:rounded-2xl border border-border/20 shadow-2xl w-full"
-                  loading="eager"
-                />
-                <div className="absolute bottom-0 left-0 right-0 h-16 md:h-32 bg-gradient-to-t from-[hsl(207,58%,11%)] to-transparent rounded-b-xl md:rounded-b-2xl" />
+                <div className="relative rounded-xl md:rounded-2xl overflow-hidden animate-border-glow border border-primary/20">
+                  <img
+                    src={heroMockup}
+                    alt="Leadfy Inteligência — plataforma de prospecção e abordagens para vendedores de apps"
+                    className="w-full"
+                    loading="eager"
+                  />
+                  <div className="absolute bottom-0 left-0 right-0 h-16 md:h-32 bg-gradient-to-t from-[hsl(207,58%,11%)] to-transparent" />
+                </div>
               </div>
             </div>
 
             {/* AI Code Animation */}
-            <div className="lg:col-span-2 order-1 lg:order-2">
+            <div className="lg:col-span-2 order-1 lg:order-2 animate-slide-right" style={{ animationDelay: "0.5s" }}>
               <p className="text-[10px] md:text-xs text-primary font-semibold uppercase tracking-wider mb-2 md:mb-3 text-center lg:text-left">
                 🤖 Veja a IA criando um app em tempo real
               </p>
               <AICodeAnimation />
-              <div className="mt-3 md:mt-4 glass-card p-3 md:p-4 border-primary/20">
+              <div className="mt-3 md:mt-4 glass-card p-3 md:p-4 border-primary/20 animate-float">
                 <div className="flex items-center gap-2 md:gap-3">
                   <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                   <p className="text-[10px] md:text-xs text-muted-foreground">

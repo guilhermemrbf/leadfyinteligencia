@@ -18,7 +18,7 @@ const StatsSection = () => {
               📊 Resultados Que Não Mentem
             </p>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
-              Números que <span className="gradient-text">provam que funciona</span>
+              Números que <span className="gradient-text-animated">provam que funciona</span>
             </h2>
             <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto">
               Não é promessa. São fatos. Veja os números de quem já está dentro.
@@ -30,7 +30,7 @@ const StatsSection = () => {
           {stats.map((s, i) => (
             <AnimatedSection key={i} delay={i * 150}>
               <div className="text-center">
-                <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text mb-2">
+                <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text mb-2 animate-number-pop" style={{ animationDelay: `${0.3 + i * 0.15}s` }}>
                   <AnimatedCounter end={s.value} suffix={s.suffix} />
                 </div>
                 <p className="text-muted-foreground text-sm">{s.label}</p>
