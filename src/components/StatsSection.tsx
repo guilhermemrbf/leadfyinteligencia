@@ -2,36 +2,30 @@ import AnimatedSection from "./AnimatedSection";
 import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
-  { value: 500, suffix: "+", label: "Pessoas já faturando com o Leadfy" },
-  { value: 10, suffix: "K", label: "Ticket médio por app vendido (R$)" },
-  { value: 15, suffix: " min", label: "Por dia para fechar clientes novos" },
-  { value: 98, suffix: "%", label: "De satisfação — quase ninguém cancela" },
+  { value: 340, suffix: "+", label: "Empresas atendidas" },
+  { value: 12, prefix: "R$ ", suffix: "M+", label: "Em receita gerada para clientes" },
+  { value: 4.9, suffix: "★", label: "Avaliação média dos clientes", isDecimal: true },
+  { value: 72, suffix: "h", label: "Para os primeiros resultados aparecerem" },
 ];
 
 const StatsSection = () => {
   return (
-    <section className="section-spacing">
-      <div className="container max-w-5xl mx-auto">
+    <section id="resultados" className="section-spacing" style={{ background: "linear-gradient(180deg, hsl(259 40% 8%) 0%, hsl(0 0% 4%) 100%)" }}>
+      <div className="max-w-5xl mx-auto">
         <AnimatedSection>
-          <div className="text-center mb-14">
-            <p className="text-primary font-semibold mb-3 uppercase tracking-wider text-xs md:text-sm">
-              📊 Resultados Que Não Mentem
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">
-              Números que <span className="gradient-text-animated">provam que funciona</span>
-            </h2>
-            <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto">
-              Não é promessa. São fatos. Veja os números de quem já está dentro.
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-16">
+            Números que falam por si
+          </h2>
         </AnimatedSection>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((s, i) => (
-            <AnimatedSection key={i} delay={i * 150}>
+            <AnimatedSection key={i} delay={i * 100}>
               <div className="text-center">
-                <div className="font-display text-4xl md:text-5xl font-extrabold gradient-text mb-2 animate-number-pop" style={{ animationDelay: `${0.3 + i * 0.15}s` }}>
-                  <AnimatedCounter end={s.value} suffix={s.suffix} />
+                <div className="text-4xl md:text-5xl font-black gradient-text mb-3 animate-number-pop" style={{ animationDelay: `${0.3 + i * 0.15}s` }}>
+                  {s.prefix || ""}
+                  {s.isDecimal ? s.value : <AnimatedCounter end={s.value} suffix={s.suffix} />}
+                  {s.isDecimal && s.suffix}
                 </div>
                 <p className="text-muted-foreground text-sm">{s.label}</p>
               </div>
